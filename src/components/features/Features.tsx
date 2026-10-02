@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Zap, Target, Globe, TrendingUp } from "lucide-react";
+import FocusGridGroup from "@/components/ui/FocusGridGroup";
 
 const features = [
   {
@@ -104,13 +105,14 @@ const Features = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <FocusGridGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div
                 key={feature.title}
                 className="feature-card"
+                data-cursor-hover
                 style={{
                   opacity: isVisible ? 1 : 0,
                   transform: isVisible ? "translateY(0)" : "translateY(30px)",
@@ -119,13 +121,6 @@ const Features = () => {
                   borderRadius: 12,
                   border: "1px solid rgba(0, 255, 136, 0.08)",
                   background: "#0D1511",
-                  transition2: "border-color 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(0, 255, 136, 0.2)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(0, 255, 136, 0.08)";
                 }}
               >
                 <div className="feature-icon-wrap" style={{ marginBottom: 20 }}>
@@ -149,7 +144,7 @@ const Features = () => {
               </div>
             );
           })}
-        </div>
+        </FocusGridGroup>
       </div>
     </section>
   );

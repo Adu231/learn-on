@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { domains } from "@/data/domains";
 import DomainCard from "./DomainCard";
 import CardFanCarousel from "./CardFanCarousel";
+import FocusGridGroup from "@/components/ui/FocusGridGroup";
 import { Domain } from "@/types";
 import { Layers, LayoutGrid } from "lucide-react";
 
@@ -166,11 +167,11 @@ const LearningDomains = ({ onDomainSelect }: LearningDomainsProps) => {
           </div>
         </div>
 
-        {/* Display Fan Carousel or Grid based on view mode */}
+        {/* Display Fan Carousel or Interactive Focus Grid based on view mode */}
         {viewMode === "fan" ? (
           <CardFanCarousel domains={domains} onDomainSelect={onDomainSelect} />
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <FocusGridGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {domains.map((domain, index) => (
               <DomainCard
                 key={domain.id}
@@ -180,7 +181,7 @@ const LearningDomains = ({ onDomainSelect }: LearningDomainsProps) => {
                 onClick={() => onDomainSelect(domain)}
               />
             ))}
-          </div>
+          </FocusGridGroup>
         )}
       </div>
     </section>

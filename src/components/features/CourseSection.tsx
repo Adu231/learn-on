@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { courses, comingSoonCourses } from "@/data/courses";
 import CourseCard from "./CourseCard";
 import ComingSoonCard from "./ComingSoonCard";
+import FocusGridGroup from "@/components/ui/FocusGridGroup";
 import { Course } from "@/types";
 
 interface CourseSectionProps {
@@ -111,8 +112,8 @@ const CourseSection = ({ onCourseSelect }: CourseSectionProps) => {
           </p>
         </div>
 
-        {/* Course Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
+        {/* Interactive Focus Course Grid */}
+        <FocusGridGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
           {courses.map((course, index) => (
             <CourseCard
               key={course.id}
@@ -122,7 +123,7 @@ const CourseSection = ({ onCourseSelect }: CourseSectionProps) => {
               onClick={() => onCourseSelect(course)}
             />
           ))}
-        </div>
+        </FocusGridGroup>
 
         {/* Coming Soon */}
         <div ref={comingRef}>
@@ -163,7 +164,7 @@ const CourseSection = ({ onCourseSelect }: CourseSectionProps) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <FocusGridGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {comingSoonCourses.map((course, index) => (
               <ComingSoonCard
                 key={course.id}
@@ -172,7 +173,7 @@ const CourseSection = ({ onCourseSelect }: CourseSectionProps) => {
                 isVisible={comingVisible}
               />
             ))}
-          </div>
+          </FocusGridGroup>
         </div>
       </div>
     </section>
