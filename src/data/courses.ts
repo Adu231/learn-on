@@ -1,0 +1,153 @@
+import { Course } from "@/types";
+
+export const courses: Course[] = [
+  {
+    id: "html-css-fundamentals",
+    title: "HTML & CSS Fundamentals",
+    description:
+      "Learn the foundations of modern web pages. Master structure with HTML and styling with CSS to build your first real websites.",
+    domain: "Web Development",
+    domainId: "web-dev",
+    duration: "4h 30m",
+    difficulty: "Beginner",
+    tags: ["HTML", "CSS", "Web"],
+    thumbnail: "html-css",
+    lessons: [
+      { id: "l1", number: 1, title: "Introduction to HTML", duration: "18m", description: "Understand the building blocks of web pages." },
+      { id: "l2", number: 2, title: "HTML Document Structure", duration: "22m", description: "Head, body, semantic elements and document flow." },
+      { id: "l3", number: 3, title: "Styling with CSS", duration: "28m", description: "Selectors, properties, values and the cascade." },
+      { id: "l4", number: 4, title: "The Box Model", duration: "20m", description: "Margin, padding, border and layout fundamentals." },
+      { id: "l5", number: 5, title: "Flexbox Layout", duration: "32m", description: "Modern one-dimensional layouts with flexbox." },
+      { id: "l6", number: 6, title: "CSS Grid", duration: "35m", description: "Two-dimensional grid-based layouts." },
+      { id: "l7", number: 7, title: "Responsive Design", duration: "30m", description: "Media queries and mobile-first design principles." },
+    ],
+  },
+  {
+    id: "javascript-essentials",
+    title: "JavaScript Essentials",
+    description:
+      "Understand programming logic and JavaScript fundamentals. Go from variables to async functions with hands-on examples.",
+    domain: "Web Development",
+    domainId: "web-dev",
+    duration: "6h 15m",
+    difficulty: "Beginner",
+    tags: ["JavaScript", "Programming", "Web"],
+    thumbnail: "javascript",
+    lessons: [
+      { id: "l1", number: 1, title: "Variables & Data Types", duration: "25m", description: "var, let, const and JavaScript's type system." },
+      { id: "l2", number: 2, title: "Functions & Scope", duration: "30m", description: "Defining functions and understanding scope." },
+      { id: "l3", number: 3, title: "Arrays & Objects", duration: "28m", description: "Working with collections and data structures." },
+      { id: "l4", number: 4, title: "DOM Manipulation", duration: "35m", description: "Selecting, modifying and reacting to HTML elements." },
+      { id: "l5", number: 5, title: "Events & Callbacks", duration: "22m", description: "Responding to user interactions." },
+      { id: "l6", number: 6, title: "Promises & Async/Await", duration: "40m", description: "Asynchronous programming patterns." },
+    ],
+  },
+  {
+    id: "react-fundamentals",
+    title: "React Fundamentals",
+    description:
+      "Build modern interactive interfaces with React. Learn components, state, hooks and the React way of thinking.",
+    domain: "Web Development",
+    domainId: "web-dev",
+    duration: "7h 45m",
+    difficulty: "Intermediate",
+    tags: ["React", "JavaScript", "Frontend"],
+    thumbnail: "react",
+    lessons: [
+      { id: "l1", number: 1, title: "What is React?", duration: "20m", description: "Component-based thinking and the virtual DOM." },
+      { id: "l2", number: 2, title: "JSX & Components", duration: "30m", description: "Writing UI with JSX syntax." },
+      { id: "l3", number: 3, title: "Props & State", duration: "35m", description: "Passing data and managing state." },
+      { id: "l4", number: 4, title: "Hooks: useState & useEffect", duration: "45m", description: "Modern React with functional hooks." },
+      { id: "l5", number: 5, title: "Handling Events", duration: "25m", description: "User interaction in React components." },
+      { id: "l6", number: 6, title: "Fetching Data", duration: "40m", description: "API calls and async data in React." },
+    ],
+  },
+  {
+    id: "python-basics",
+    title: "Python Basics",
+    description:
+      "Start programming with Python. Clear syntax, practical examples and real understanding of how code works.",
+    domain: "Data Science",
+    domainId: "data-science",
+    duration: "5h 20m",
+    difficulty: "Beginner",
+    tags: ["Python", "Programming", "Scripting"],
+    thumbnail: "python",
+    lessons: [
+      { id: "l1", number: 1, title: "Python & Your Environment", duration: "15m", description: "Installing Python and running your first script." },
+      { id: "l2", number: 2, title: "Variables & Types", duration: "25m", description: "Strings, numbers, booleans and None." },
+      { id: "l3", number: 3, title: "Control Flow", duration: "30m", description: "If statements, loops and logical operators." },
+      { id: "l4", number: 4, title: "Functions", duration: "35m", description: "Defining, calling and returning from functions." },
+      { id: "l5", number: 5, title: "Lists & Dictionaries", duration: "32m", description: "Working with Python's core data structures." },
+    ],
+  },
+  {
+    id: "git-github",
+    title: "Git & GitHub",
+    description:
+      "Learn version control and modern collaboration. Understand branches, commits, merges and remote workflows.",
+    domain: "Programming",
+    domainId: "programming",
+    duration: "3h 10m",
+    difficulty: "Beginner",
+    tags: ["Git", "GitHub", "DevOps"],
+    thumbnail: "git",
+    lessons: [
+      { id: "l1", number: 1, title: "What is Version Control?", duration: "15m", description: "Why version control matters for every developer." },
+      { id: "l2", number: 2, title: "Git Basics", duration: "25m", description: "init, add, commit and the staging area." },
+      { id: "l3", number: 3, title: "Branches & Merging", duration: "30m", description: "Parallel development and combining work." },
+      { id: "l4", number: 4, title: "Working with GitHub", duration: "35m", description: "Push, pull, clone and remote repositories." },
+      { id: "l5", number: 5, title: "Pull Requests", duration: "28m", description: "Collaboration and code review workflows." },
+    ],
+  },
+  {
+    id: "nodejs-basics",
+    title: "Node.js Basics",
+    description:
+      "Understand backend development with Node.js. Build servers, handle requests and work with the file system.",
+    domain: "Web Development",
+    domainId: "web-dev",
+    duration: "5h 50m",
+    difficulty: "Intermediate",
+    tags: ["Node.js", "Backend", "JavaScript"],
+    thumbnail: "nodejs",
+    lessons: [
+      { id: "l1", number: 1, title: "Node.js & the Runtime", duration: "20m", description: "How Node.js runs JavaScript outside the browser." },
+      { id: "l2", number: 2, title: "Modules & npm", duration: "25m", description: "CommonJS modules and the Node ecosystem." },
+      { id: "l3", number: 3, title: "File System Operations", duration: "30m", description: "Reading, writing and managing files." },
+      { id: "l4", number: 4, title: "Building an HTTP Server", duration: "40m", description: "Creating your first web server." },
+      { id: "l5", number: 5, title: "Express Framework", duration: "45m", description: "Routes, middleware and REST APIs." },
+    ],
+  },
+];
+
+export const comingSoonCourses = [
+  {
+    id: "advanced-ai-engineering",
+    title: "Advanced AI Engineering",
+    description: "Build production AI systems, fine-tune models and deploy intelligent applications.",
+    domain: "AI & Machine Learning",
+    tags: ["AI", "LLMs", "Engineering"],
+  },
+  {
+    id: "full-stack-development",
+    title: "Full Stack Development",
+    description: "End-to-end application development from frontend to backend and deployment.",
+    domain: "Web Development",
+    tags: ["React", "Node.js", "Databases"],
+  },
+  {
+    id: "advanced-cybersecurity",
+    title: "Advanced Cybersecurity",
+    description: "Penetration testing, exploit analysis and advanced defense strategies.",
+    domain: "Cybersecurity",
+    tags: ["Security", "Ethical Hacking", "CTF"],
+  },
+  {
+    id: "cloud-architecture",
+    title: "Cloud Architecture",
+    description: "Design scalable infrastructure with AWS, GCP and modern cloud patterns.",
+    domain: "Cloud & DevOps",
+    tags: ["AWS", "GCP", "Kubernetes"],
+  },
+];
